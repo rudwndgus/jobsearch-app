@@ -11,6 +11,8 @@ const PopularJobCard = ({item,selectedJob,handleCardPress}) => {
     }
     return(
         <TouchableOpacity style={styles.container(selectedJob,item)}>
+            
+        <TouchableOpacity style={styles.container(selectedJob,item)}>
             <Image
                 source={checkImageURL(item?.employer_log)
                     ?{url : item.employer_log}
@@ -18,6 +20,10 @@ const PopularJobCard = ({item,selectedJob,handleCardPress}) => {
                 }
                 
             />
+        </TouchableOpacity>
+        <Text style={styles.companyName}numberOfLines={1}>
+            {item.employer_name}
+        </Text>
         </TouchableOpacity>
             
     )}
